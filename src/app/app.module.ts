@@ -14,26 +14,48 @@ import {
   MatSidenavModule,
   MatListModule,
   MatCardModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
 
 } from '@angular/material';
 import { BodyComponentComponent } from './componentes/body-component/body-component.component';
+import { LoginComponent } from './componentes/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './componentes/register/register.component';
+import { HomeComponent } from './componentes/home/home.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponentComponent,
-    BodyComponentComponent
+    BodyComponentComponent,
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    NgxSpinnerModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
     MatSidenavModule,
     MatListModule,
   MatCardModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatCardModule,
+  MatDatepickerModule,
+  MatNativeDateModule
+
 
   ],
   providers: [],

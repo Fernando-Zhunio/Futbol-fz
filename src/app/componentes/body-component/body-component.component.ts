@@ -14,10 +14,10 @@ export class BodyComponentComponent implements OnInit {
 
   ngOnInit() {
     this.juegos = [
-      {name:'Barcelona.S.C vs C.S.Emelec',country:'Ecuador',hour:'17:30'},
-      {name:'Barcelona vs Real Madrid',country:'España',hour:'10:30'},
-      {name:'Osasuna vs Valencia',country:'España',hour:'13:00'},
-      {name:'Deportivo pasto vs Cali',country:'Colombia',hour:'16:30'},
+      {img_local:'https://www.jea.com/cdn/images/avatar/avatar-alt.svg',img_visited:'https://www.jea.com/cdn/images/avatar/avatar-alt.svg',deport:'futbol',name_local:'Barcelona.S.C',name_visited:'C.S.Emelec',country:'Ecuador',hour:'17:30'},
+      {img_local:'https://www.jea.com/cdn/images/avatar/avatar-alt.svg',img_visited:'https://www.jea.com/cdn/images/avatar/avatar-alt.svg',deport:'futbol',name_local:'Barcelona',name_visited:'Real Madrid',country:'España',hour:'10:30'},
+      {img_local:'https://www.jea.com/cdn/images/avatar/avatar-alt.svg',img_visited:'https://www.jea.com/cdn/images/avatar/avatar-alt.svg',deport:'futbol',name_local:'Osasuna',name_visited:'Valencia',country:'España',hour:'13:00'},
+      {img_local:'https://www.jea.com/cdn/images/avatar/avatar-alt.svg',img_visited:'https://www.jea.com/cdn/images/avatar/avatar-alt.svg',deport:'futbol',name_local:'Deportivo pasto',name_visited:'Cali',country:'Colombia',hour:'16:30'},
     ];
     // var iframe = document.getElementById("iframe-fz");
   }

@@ -1,22 +1,32 @@
 <mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="example-sidenav px-1" mode="side" opened>
+    <mat-drawer #drawer class="example-sidenav px-1" mode="side">
         <mat-action-list>
-
             <mat-card class="mb-1" mat-list-item *ngFor="let juego of juegos">
-                {{juego.name}}<br>
+                {{juego.name}}
+                <div><img [src]="juego.img_local" class="avatar-equipo">{{juego.name_local}} vs <img [src]="juego.img_visited" class="avatar-equipo">{{juego.name_visited}}</div>
                 <div class="mat-headline">{{juego.hour}}</div>
             </mat-card>
         </mat-action-list>
     </mat-drawer>
 
-    <div class="example-sidenav-content">
+    <div class="example-sidenav-content container">
+        <div class="rounded p-4 text-center my-4" style="background-color: #009688;">
+            <h1 class="display-4">
+                <div><img src="https://ssl.gstatic.com/onebox/media/sports/logos/E0wlNj3ZcvO0hmFpU-5z9g_96x96.png" alt="emelec" class="avatar-equipo">Emelec vs Barcelona<img src="https://ssl.gstatic.com/onebox/media/sports/logos/snzD6Ep_orwAcAA5c5sPNw_96x96.png"
+                        alt="bacelona" class="avatar-equipo"></div>
+            </h1>
+            <p class="lead">El clasico del Astillero del Ecuador</p>
+            <hr class="my-4">
+            <p>19:00</p>
+        </div>
+
         <!-- <button type="button" mat-button (click)="drawer.toggle()">
         Toggle sidenav
       </button> -->
         <!-- <iframe #iframefz onload="iframeLoad()" src="https://espn-live.stream/stream/54013.html" frameborder="0"></iframe> -->
         <!-- <video preload="metadata" src="https://espn-live.stream/f80d3e5d-32a1-4a66-888c-978e4ea836d1"></video> -->
-        <iframe allow='encrypted-media' width='640' height='360' marginwidth='0' marginheight='0' scrolling='no' frameborder='0' allowfullscreen='yes' src='https://live-golf.stream/stream/83058.html'></iframe>
-        <iframe allow='encrypted-media' width='640' height='360' marginwidth='0' marginheight='0' scrolling='no' frameborder='0' allowfullscreen='yes' src='https://live-golf.stream/stream/83058.html'></iframe> <iframe allow='encrypted-media' width='640'
-            height='360' marginwidth='0' marginheight='0' scrolling='no' frameborder='0' allowfullscreen='yes' src='https://live-golf.stream/stream/85517.html'></iframe>
+        <!-- https://www.veopartidos.net/ecuaonline.php -->
+        <!-- <iframe class="w-100" allow='encrypted-media' width='640' height='360' scrolling='no' frameborder='0' allowfullscreen='yes' src='https://live-golf.stream/stream/85517.html'></iframe> -->
+        <iframe class="w-100" allow='encrypted-media' width='640' height='360' scrolling='no' frameborder='0' allowfullscreen='yes' src='https://mikeamigorein.xyz/stream/82806.html'></iframe>
     </div>
 </mat-drawer-container>

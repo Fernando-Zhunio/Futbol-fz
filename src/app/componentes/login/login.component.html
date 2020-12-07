@@ -1,0 +1,34 @@
+<div class="login row">
+    <div class="col-md-6 col-sm-12">
+        <div class="p-4 text-md-left text-center ">
+            <h1 class="display-4">Iniciar Sesion</h1>
+            <p class="lead">Subtitle</p>
+            <!-- <hr class="my-4">
+            <p>Content</p> -->
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <mat-card class="m-auto w-75">
+            <mat-card-content>
+                <form [formGroup]="formLogin" (ngSubmit)="login()">
+                    <mat-form-field class="d-block">
+                        <input matInput placeholder="Ingrese su correo" type="email" formControlName="email" required>
+                        <mat-error *ngIf="formLogin.controls['email'].invalid">Correo Requerido</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="d-block">
+                        <input matInput placeholder="Ingrese su password" formControlName="password" required [type]="hide ? 'password' : 'text'">
+                        <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                        <mat-error *ngIf="formLogin.controls['password'].invalid">Contraseña Requerido</mat-error>
+                    </mat-form-field>
+                    <div class="text-center">
+                        <button [disabled]="formLogin.invalid" mat-raised-button color="accent" class="m-2">Ingresar</button>
+                        <button mat-raised-button [routerLink]="['/register']" color="primary"> Ir a Registrarse</button>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

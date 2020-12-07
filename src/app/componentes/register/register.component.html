@@ -1,0 +1,42 @@
+<div class="register row">
+    <div class="col-md-6 col-sm-12">
+        <div class="p-4 text-md-left text-center ">
+            <h1 class="display-4">Registro de Usuarios</h1>
+            <p class="lead">Subtitle</p>
+            <!-- <hr class="my-4">
+            <p>Content</p> -->
+        </div>
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <mat-card class="m-auto w-75">
+            <mat-card-content>
+                <form [formGroup]="formRegister" (ngSubmit)="registrarse()">
+                    <mat-form-field class="d-block">
+                        <input matInput placeholder="Ingrese su nombres" formControlName="name" required>
+                        <mat-error *ngIf="formRegister.controls['name'].invalid">Nombres Requerido</mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="d-block">
+                        <input matInput placeholder="Ingrese su correo" formControlName="email" required>
+                        <mat-error *ngIf="formRegister.controls['email'].invalid">Correo Requerido</mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="d-block">
+                        <input matInput placeholder="Ingrese su password" formControlName="password" required [type]="hide ? 'password' : 'text'">
+                        <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                        <mat-error *ngIf="formRegister.controls['password'].invalid">Contraseña Requerido</mat-error>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput [matDatepicker]="picker" formControlName="birthday" placeholder="Seleccione su fecha de nacimiento">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                    <div class="text-center">
+                        <button type="submit" [disabled]="formRegister.invalid" mat-raised-button color="accent" class="m-2">Registrarse</button>
+                        <button [routerLink]="['/login']" mat-raised-button color="primary">Ir a Iniciar sesion</button>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
